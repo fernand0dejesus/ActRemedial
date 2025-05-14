@@ -1,17 +1,16 @@
 import express from "express";
 import patientsController from "../controllers/patientsController.js";
-// Router() nos ayuda a colocar los metodos
-// que tendra mi ruta
+
+//coloca los metodos que tendra la la ruta
 const router = express.Router();
 
-router
-  .route("/")
- // .get(patientsController.getpatients)
-  .post(patientsController.createpatients);
+router.route("/")
+.get(patientsController.getPatient) //mostrar
 
-//router
-  //.route("/:id")
-  //.put(patientsController.updatepatients)
-  //.delete(patientsController.deletepatients);
+router.route("/:id")
+
+.put(patientsController.updatePatients) //actualizar
+.delete(patientsController.deletePatients) //borrar
 
 export default router;
+
