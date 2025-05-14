@@ -1,14 +1,14 @@
 import express from "express";
-import registerPatientcontroller from "../controllers/RegisterpatientsController";
+import registerPatientscontroller from "../controllers/RegisterpatientsController.js";
 
 //coloca los metodos que tendra la la ruta
 const router = express.Router();
 
 router.route("/")
-.post(registerPatientController.registerPatient) //agregar
+.post(registerPatientscontroller.registerPatient) //agregar
 
 //api/registerCustomers/verifyCodeEmail
-router.route("/verifyCodeEmail").post(registerPatientController.verifyCodeEmail)
+router.route("/verifyCodeEmail").post(registerPatientscontroller.verifyCodeEmail)
 
 
 

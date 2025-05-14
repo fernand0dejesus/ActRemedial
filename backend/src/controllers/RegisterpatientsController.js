@@ -102,4 +102,4 @@ res.json({message: "error"+ error})
     }
 }
 
-export default registerPatientcontroller
+export default registerPatientscontroller
